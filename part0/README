@@ -1,0 +1,42 @@
+
+Title Exercise 0.4
+Browser -> Server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
+Server -> Browser: Status Code 302
+note right of Server: Asks browser to do a new HTTP GET request
+Browser -> Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+Server -> Browser: HTML code
+Browser -> Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+Server -> Browser: CSS file "main.css"
+Browser -> Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+Server -> Browser: JavaScript file "main.js"
+Browser -> Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+Server -> Browser: data.json  raw data 
+
+
+
+
+Title Exercise 0.5
+Browser -> Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+Server -> Browser: HTML code
+Browser -> Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+Server -> Browser: CSS file "main.css"
+Browser -> Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+Server -> Browser: JavaScript file "main.js"
+Browser -> Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+Server -> Browser: data.json  raw data 
+note left of Browser: Submit button pressed
+note left of Browser: JS is executed and data is sent to server
+Browser -> Server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
+Server -> Browser: status code 201
+note left of Browser: submitted note is added to list without refreshing page
+
+
+
+title Exercise 0.6
+note left of Browser: Submit button pressed
+note left of Browser: JS executes and prevents page reload
+note left of Browser: JS executes event handler to add note to list
+note left of Browser: data is sent to server as JSON type
+Browser -> Server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
+Server -> Browser: status code 201
+
